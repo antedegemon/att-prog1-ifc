@@ -1,0 +1,132 @@
+:root {
+    --color-a: #f72653;
+    --color-b: #19171a;
+    --color-c: #d3d3d3;
+}
+
+* {
+    color: var(--color-c);
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', sans-serif, Helvetica;
+}
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+    align-items: center;
+    background-color: var(--color-b);
+}
+
+@keyframes piscadela {
+    50% {
+        background-color: rgb(233, 130, 147);
+    }
+}
+
+main {
+    height: 50vmin;
+    width: 50vmin;
+    display: flex;
+    flex-wrap: wrap;
+    transform: rotate(45deg);
+    margin: 14% 25%;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.start,.start2,.start3 {
+    color: var(--color-c);
+}
+
+.endgame {
+    color: var(--color-a);
+}
+
+.scrtxt {
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+}
+
+div.warning1,.warning2,.warning3{
+    display: flex;
+    flex-wrap: wrap;
+    visibility: hidden;
+    position: absolute;
+}
+
+.defeat{
+    position: absolute;
+    flex-wrap: wrap;
+    background-color: #0f0e0fee;
+    border-radius: 3.141592653589793%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: 14%;
+    margin-top: 1%;
+}
+
+.waitturn,.waitstart{
+    position: absolute;
+    flex-wrap: wrap;
+    background-color: #0f0e0fee;
+    color: var(--color-a);
+    border-radius: 3.141592653589793%;
+    padding-bottom: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-left: 15%;
+    margin-top: 1%;
+}
+
+.endgame2{
+    color: var(--color-a);
+}
+
+
+main>div {
+    width: 43%;
+    flex: none;
+    margin: 3.5%;
+    border-radius: 3.141592653589793%;
+    background-color: var(--color-a);
+}
+
+/*
+main>div:nth-child(1) {
+    background-color: red;
+}
+
+main>div:nth-child(2) {
+    background-color: green;
+}
+
+main>div:nth-child(3) {
+    background-color: yellow;
+}
+
+main>div:nth-child(4) {
+    background-color: blue;
+}
+*/
+
+main>div.animate {
+    /* background-color: white; */
+    /* usado no exemplo transition */
+    animation: piscadela 314ms ease-in-out;
+    /* animation-name: piscadela;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out; */
+}
